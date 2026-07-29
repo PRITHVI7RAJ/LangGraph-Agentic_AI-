@@ -1,3 +1,7 @@
+# we put Streaming in forented
+
+
+
 import streamlit as st
 from langgraph_backend import chatbot
 from langchain_core.messages import HumanMessage
@@ -22,7 +26,6 @@ if user_input:
        st.text(user_input)
 
     
-    #ai_message = response['messages'][-1].content[0]["text"]
     with st.chat_message('assistant'):
        ai_message = st.write_stream(
         message_chunk.text for message_chunk, metadata in chatbot.stream(
