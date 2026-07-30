@@ -1,0 +1,8 @@
+# test
+
+CONFIG = {'configurable': {'thread_id' : 'thread-1' }}
+response = chatbot.invoke(
+            {'messages':[HumanMessage(content= 'Hi my name is Alpha')]},
+            config = CONFIG
+        )
+print(response)
